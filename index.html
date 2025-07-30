@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Grand Park Moinhos - Condomínio clube na melhor localização de Canoas. Apartamentos de 2 e 3 dormitórios com infraestrutura completa.">
+    <title>Grand Park Moinhos | Condomínio Clube em Canoas</title>
+    <!--
+    MODEL LANDPAGE
+    ROBERTO FETTUCCIA - v. 5.2 
+    BUILD - 29.07.2025 - 22:45
+    Reprodução e utilziação apenas com autorizaçao.
+    corretor.fettuccia@gmail.com
+    +5551998111078 - Whatsapp.
+    -->
+    <style>
+        /* Estilos gerais */
+        :root {
+            --primary-color: #65855d;
+            --secondary-color: #128c7e;
+            --dark-color: #2d2d2d;
+            --light-color: #ffffff;
+            --overlay-color: rgba(0, 0, 0, 0.7);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0px;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 110%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1px;
+        }
+
+        h1, h2, h3, h4 {
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 13px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-align: center;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        .btn[type="submit"]:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background: var(--secondary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 2s ease;
+            transform: translateZ(0);
+            box-shadow: 0 0 0 80 rgba(18, 140, 126, 0.7);
+            animation: pulse 1s infinite;
+        }
+
+        .btn-whatsapp:hover {
+            background: #075e54;
+            animation: none;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 174, 255, 0.7);
+            }
+            90% {
+                box-shadow: 0 0 0 80px rgba(255, 255, 255, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(18, 140, 126, 0);
+            }
+        }
+
+        .btn-whatsapp:active:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 5px;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.5);
+            opacity: 0;
+            border-radius: 20%;
+            transform: scale(1, 1) translate(-50%, -50%);
+            transform-origin: 80% 80%;
+            animation: ripple 0.5s ease-out;
+        }
+
+        @keyframes ripple {
+            0% {
+                transform: scale(0, 0);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(80, 80);
+                opacity: 0;
+            }
+        }
+
+        .section {
+            padding: 5px 0;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark-color);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: var(--primary-color);
+            margin: 3px auto;
+        }
+
+        /* Header */
+        .header-main {
+            background: var(--light-color);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 5px 0;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .main-navigation ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .main-navigation li {
+            margin: 12px 20px;
+        }
+
+        .main-navigation a {
+            color: var(--dark-color);
+            font-weight: 600;
+            transition: var(--transition);
+            padding: 5px 0;
+            position: relative;
+        }
+
+        .main-navigation a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 5px;/*controla linha animada tamanho*/
+            border-radius: 5px;/*controla bordalinha animada tamanho*/
+            background: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .main-navigation a:hover::after {
+            width: 100%;
+        }
+
+        .main-navigation .highlight a {
+            background: var(--primary-color);
+            color: white;
+            padding: 20px 20px;
+            border-radius: 30px;
+        }
+
+        .main-navigation .highlight a:hover {
+            background: var(--secondary-color);
+        }
+
+        .main-navigation .highlight a::after {
+            display: none;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section - Ajustado */
+        .hero-section {
+            min-height: 20vh; 
+            background-image: url('https://raw.githubusercontent.com/corretor-fettuccia/GrandParkMoinhos/refs/heads/main/img/head.jpg');
+            background-size: cover;
+            background-position: left;
+            position: relative;
+            display: flex;
+            align-items: left;
+            padding: 12px 12px; 12px;
+            overflow: hidden;
+        }
+
+        @keyframes panBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 20% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .hero-section {
+            animation: panBackground 10s infinite linear;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--overlay-color);
+        }
+
+        .hero-content {
+            size: 10px;
+            position: relative;
+            z-index: 2;
+            color: var(--light-color);
+            max-width: 70vh;
+            width: 50vh;
+            margin: 1vh auto;
+            background: rgba(0, 0, 0, 0.7);
+            padding:40px;
+            border-radius: 30px;
+            backdrop-filter: blur(1px);
+        }
+
+        .hero-logo {
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .hero-title {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        /* Formulário - Ajustado */
+        .lead-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: white;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 4px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            font-family: inherit;
+        }
+
+        .form-group input::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* Sobre */
+        .about-section {
+            background: white;
+            position: relative;
+        }
+
+        .about-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            text-shadow: #00000091;
+            
+        }
+
+        .texto-decorado {
+        font-family: 'Segoe UI', 'Arial', sans-serif; /* Mais moderno que Arial puro */
+    font-size: 1.2rem;
+    font-weight: 500; /* Semi-bold (menos agressivo que "bold") */
+    color: #333; /* Preto mais suave que #000 */
+    line-height: 1.6; /* Espaçamento entre linhas para conforto visual */
+    letter-spacing: 1px; /* Pequeno espaçamento para elegância */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* Sombra sutil para profundidade */
+        }
+        .responsive-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-top: 10px;
+            object-fit: cover;
+        }
+
+        /* Galeria */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+            gap: 12px 12px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 35px rgba(0, 0, 0, 0.50);
+        }
+
+        .gallery-item img {
+            width: 80vh;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+            object-fit: contain;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(0.90);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px;
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+
+        /* Localização */
+        .location-section {
+            background: #f9f9f9;
+        }
+
+        .location-map {
+            height: 450px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .location-map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background-image: url('https://raw.githubusercontent.com/corretor-fettuccia/GrandParkMoinhos/refs/heads/main/img/destaque2.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            color: white;
+            text-align: center;
+            padding: 10px 100px;
+        }
+
+        .cta-overlay {
+            position: absolute;
+            top: 0px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-text {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .footer-logo {
+            margin-bottom: 20px;
+        }
+
+        .footer-logo img {
+            height: 40px;
+        }
+
+        .footer-copyright {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsividade */
+        @media (max-width: 992px) {
+            .main-navigation {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 80%;
+                height: calc(100vh - 80px);
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+                transition: var(--transition);
+            }
+
+            .main-navigation.active {
+                left: 0;
+            }
+
+            .main-navigation ul {
+                flex-direction: column;
+            }
+
+            .main-navigation li {
+                margin: 10px 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-content {
+                margin: 20px auto;
+                max-width: 80%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section-title h2 {
+                font-size: 1rem;
+            }
+
+            .hero-title {
+                font-size: 1.2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .cta-title {
+                font-size: 1.2rem;
+            }
+
+            .section {
+                padding: 30px 0;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-section {
+                padding: 10px 0 20px;
+            }
+
+            .hero-content {
+                padding: 15px;
+                max-width: 90%;
+            }
+
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .form-group input {
+                padding: 10px 12px;
+            }
+
+            .btn-primary {
+                padding: 12px;
+            }
+
+            .location-map {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-main">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="#">
+                    <img src="https://raw.githubusercontent.com/corretor-fettuccia/GrandParkMoinhos/refs/heads/main/img/logo-bk.png" alt="Grand Park Moinhos">
+                </a>
+            </div>
+
+            <nav class="main-navigation">
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#plantas">Plantas</a></li>
+                    <li><a href="#localizacao">Localização</a></li>
+                    <li class="highlight"><a href="#contato">Tenho Interesse</a></li>
+                </ul>
+            </nav>
+
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <img src="https://raw.githubusercontent.com/corretor-fettuccia/GrandParkMoinhos/refs/heads/main/img/logo-white.png" alt="Grand Park Moinhos" class="hero-logo">
+                
+                <h1 class="hero-title">2 e 3 dormitórios em um condomínio clube <strong>na melhor localização de Canoas</strong></h1>
+                
+                <p class="hero-subtitle">Aproveite unidades limitadas -CONFIRA O DESCONTOS EXCLUSIVOS!-</p>
+                <!-- Campos existentes (ocultos) -->
+                 <form class="lead-form" id="clienteForm1">
+                    <input type="text" id="produto1" name="produto" value="Grand Park Moinhos" hidden>
+                    <input type="hidden" id="dataHora1" name="dataHora">
+        
+            <!-- Campos existentes visíveis -->
+        <div class="form-group">
+            <label for="nome1">Nome Completo:*</label>
+            <input required type="text" id="nome1" name="nome" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">E-mail:*</label>
+            <input type="emai" id="email1" name="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="telefone1">Telefone:*</label>
+            <input required type="tel" id="telefone1" name="telefone" required>
+        </div>
+        
+        <!-- RENDA -->
+        <!-- PARA ATIVAR  style="display:block;" -->
+        <div style="display:none;" class="form-group">
+            <label for="renda1">Renda Mensal:</label>
+            <input type="text" id="renda1" name="renda">
+        </div>
+        
+        <!-- NASCIMENTO -->
+        <!-- PARA ATIVAR  style="display:block;" -->
+        <div style="display:none;" class="form-group">
+            <label for="nascimento1">Data de Nascimento:</label>
+            <input type="date" id="nascimento1" name="nascimento">
+        </div>
+        
+        <!-- COMPLEMENTO --> 
+        <!-- PARA ATIVAR  style="display:block;" -->
+        <div style="display:NONE;" class="form-group radio-group">
+            <div class="radio-option" >
+                <input type="checkbox" id="anosCtps1" name="anosCtps" value="X">
+                <label for="anosCtps1">3 Anos de carteira assinada ?</label>
+            </div>
+            <div class="radio-option">
+                <input type="checkbox" id="fatorsocial1" name="fatorsocial" value="X">
+                <label for="fatorsocial1">Possui cônjuge ou dependente(a)</label>
+            </div>
+            <div class="radio-option">
+                <input type="checkbox" id="imovelnome1" name="imovelnome" value="X">
+                <label for="imovelnome1">Possui imóbvel no nome ?</label>
+            </div>
+        </div>
+        
+        <div id="resposta1" style="text-align: center; margin-top: 20px;"></div>
+        <button type="submit" class="btn btn-primary" id="submitButton1">Enviar</button>
+        </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="section about-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>TUDO O QUE VOCÊ PRECISA DE UM CLUBE, SEM PRECISAR SAIR DE CASA.</h2>
+            </div>
+            
+            <div class="about-content texto-decorado">
+                <p>O Grand Park Moinhos celebra a união entre um condomínio-clube com mais de 3400 m² de infraestrutura, um mall especializado em serviços e a melhor localização de Canoas. Mais um lançamento com a assinatura alto padrão Melnick, um empreendimento que conecta o melhor de 3 mundos: família, lazer e conveniência em um residencial que é um verdadeiro clube de lazer.</p>
+            </div>
+        </div>
+        <!-- Imagem de fundo ajustada -->
+        <img src="https://raw.githubusercontent.com/corretor-fettuccia/GrandParkMoinhos/refs/heads/main/img/implantacao.jpg" alt="Implantação do condomínio" class="responsive-image">
+    </section>
+
+    <!-- Galeria Infraestrutura -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Infraestrutura</h2>
+                <p><div class="texto-decorado">Tudo o que você precisa de um clube, sem precisar sair de casa.</div></p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://raw.githubusercontent.com/corretor-fettuccia/GrandParkMoinhos/refs/heads/main/img/Imagem-1.jpeg" alt="Quadra de esportes">
+                    <div class="gallery-caption">Quadra de esportes</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://raw.githubusercontent.com/corretor-fettuccia/GrandParkMoinhos/refs/heads/main/img/Imagem-5.jpeg" alt="Piscina">
+                    <div class="gallery-caption">Piscina Adulto/Infantil</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://raw.githubusercontent.com/corretor-fettuccia/GrandParkMoinhos/refs/heads/main/img/Imagem-3.jpeg" alt="Salão de festas">
+                    <div class="gallery-caption">Salao de festas</div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://raw.githubusercontent.com/corretor-fettuccia/GrandParkMoinhos/refs/heads/main/img/Imagem-8.jpeg" alt="diversão da garotada">
+                    <div class="gallery-caption">Área Teen / Externo e fechado</div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://raw.githubusercontent.com/corretor-fettuccia/GrandParkMoinhos/refs/heads/main/img/Imagem-15.jpeg" alt="Espaço gourmet">
+                    <div class="gallery-caption">Espaço gourmet</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://raw.githubusercontent.com/corretor-fettuccia/GrandParkMoinhos/refs/heads/main/img/Imagem-13.jpeg" alt="Estacionamento Visitantes">
+                    <div class="gallery-caption">Estacionamento Visitantes</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="video" class="section">
+        <div class="container" style="center">
+            <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/eWBXVlnSgRw?autoplay=1&mute=1&playsinline=1&controls=0&rel=0&modestbranding=1&loop=1&playlist=eWBXVlnSgRw" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="autoplay; encrypted-media" 
+            allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+    <!-- Plantas -->
+    <section id="plantas" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Plantas das unidades</h2>
+                <p><div class="texto-decorado">O tamanho ideal para cada estilo de vida.</div></p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://raw.githubusercontent.com/corretor-fettuccia/GrandParkMoinhos/refs/heads/main/img/1-dorms-56m2-liv-est-710x375.png" alt="1 dormitório com living estendido | 56 m²">
+                    <div class="gallery-caption">1 dormitório com living estendido | 56 m²</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://raw.githubusercontent.com/corretor-fettuccia/GrandParkMoinhos/refs/heads/main/img/2-dorms-56m2-710x375.png" alt="2 dormitórios | 56 m²">
+                    <div class="gallery-caption">2 dormitórios | 56 m²</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://raw.githubusercontent.com/corretor-fettuccia/GrandParkMoinhos/refs/heads/main/img/2-dorms-67m2-liv-est-710x375.png" alt="2 dormitórios | 67 m²">
+                    <div class="gallery-caption">2 dormitórios | 67 m²</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://raw.githubusercontent.com/corretor-fettuccia/GrandParkMoinhos/refs/heads/main/img/2-dorms-87m2-living-est-710x375.png" alt="2 dormitórios | 87 m² | living estendido">
+                    <div class="gallery-caption">2 dormitórios | 87 m² | living estendido</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://raw.githubusercontent.com/corretor-fettuccia/GrandParkMoinhos/refs/heads/main/img/3-dorms-67m2--710x375.png" alt="3 dormitórios | 67 m²">
+                    <div class="gallery-caption">3 dormitórios | 67 m²</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Localização -->
+    <section id="localizacao" class="section location-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Localização privilegiada</h2>
+                <p>Bem ao lado do Park Shopping Multiplan, na Av. Dr. Sezefredo Azambuja Vieira, quase na esquina com a Rua Açucena, duas vias com diversas opções de comércio e lazer, em uma região de alto padrão e que está em pleno crescimento.</p>
+            </div>
+            
+            <div class="location-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3458.123588979679!2d-51.15862198318931!3d-29.918343993245404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9519703ff55b2a07%3A0xa0b6f486c23992be!2sAvenida%20Doutor%20Sezefredo%20Azambuja%20Vieira%2C%202160!5e0!3m2!1spt-BR!2sbr!4v1665971764295!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-overlay"></div>
+        <div class="container">
+            <div class="cta-content">
+                <img src="https://raw.githubusercontent.com/corretor-fettuccia/GrandParkMoinhos/refs/heads/main/img/seuclube.png" alt="Seu clube" class="cta-logo">
+                <h2 class="cta-title">Garanta seu apartamento</h2>
+                <p class="cta-text">Cadastre-se e entre na lista de prioridade de interesse do pré-lançamento.</p>
+                
+                <form class="lead-form" id="clienteForm2">
+                    <input type="text" id="produto1" name="produto" value="Grand Park Moinhos" hidden>
+                    <input type="hidden" id="dataHora1" name="dataHora">
+                    <div class="form-group">
+                        <input required type="text" id="nome2" name="nome" placeholder="Nome*" required>
+                    </div>
+                    <div class="form-group">
+                        <input required type="email" id="email2" name="email" placeholder="E-mail*" required>
+                    </div>
+                    <div class="form-group">
+                        <input required type="tel" id="telefone2" name="telefone" placeholder="Celular*" required>
+                    </div>
+                    <button type="submit" id="submitButton2" class="btn btn-primary">Quero mais informações..</button>
+                    <div id="resposta2" style="text-align: center; margin-top: 20px;"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logo Melnick -->
+    <section class="section" style="background-color: #65855d; padding: 40px 0;">
+        <div class="container">
+            <div style="text-align: center;">
+                <img src="https://raw.githubusercontent.com/corretor-fettuccia/GrandParkMoinhos/refs/heads/main/img/logo-melnick-site-01-1.png" alt="Melnick Incorporadora" style="max-width: 100%; height: auto;">
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp -->
+    <section id="contato" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Saiba mais pelo WhatsApp</h2>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <a onclick="window.open(wamesend(), '_blank')" class="btn btn-whatsapp" target="_blank">
+                    <span style="margin-right: 10px;">📱</span> Conversar no WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <img src="https://raw.githubusercontent.com/corretor-fettuccia/GrandParkMoinhos/refs/heads/main/img/logo-bk.png" alt="Grand Park Moinhos" style="height: 40px;">
+            </div>
+            <p class="footer-copyright">Grand Park Moinhos | Vendas: Roberto Fettuccia | Creci 83599-F</p>
+        </div>
+    </footer>
+
+<script>
+    
+// Configura cada formulário
+    setupFormSubmit("clienteForm1", "submitButton1", "resposta1", "https://script.google.com/macros/s/AKfycbzeJCSOcY_5JI8CcFgkIIh6jmQgY0eSQOY-TroQI4Tb33aCuKLVGy6pX8f-RwxZR9f-/exec");
+    setupFormSubmit("clienteForm2", "submitButton2", "resposta2", "https://script.google.com/macros/s/AKfycbzeJCSOcY_5JI8CcFgkIIh6jmQgY0eSQOY-TroQI4Tb33aCuKLVGy6pX8f-RwxZR9f-/exec");
+
+//-----------BEGIN SCRIPT POST FORM ------------------
+//
+// ====== [Submit GS script - Planilha] ======
+// Version: 3.0.4
+// Date: 2025-07-29
+// Changes:
+// - Corrigido bug de validação no botão "Salvar"
+// - multi implementação
+// - Adicionado controle de "multiform"
+// Script listener triggers the action. Do not set up the 'action' form or assign the 'action' attribute — only set the ID.
+// - corretor.fettuccia@gmail.com
+// - 5551998111078
+
+function setupFormSubmit(formId, submitButtonId, respostaId, actionUrl) {
+    const form = document.getElementById(formId);
+    const resposta = document.getElementById(respostaId);
+    const submitButton = document.getElementById(submitButtonId);
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        
+        // Desabilita o botão e muda o texto
+        submitButton.disabled = true;
+        submitButton.textContent = "Enviando...";
+        
+        // Gera data/hora atual
+        const agora = new Date();
+        const dataHoraFormatada = agora.toLocaleString("pt-BR");
+        
+        // Se o formulário tiver um campo dataHora, preenche
+        const dataHoraField = form.querySelector("[name='dataHora']");
+        if (dataHoraField) {
+            dataHoraField.value = dataHoraFormatada;
+        }
+
+        const formData = new FormData(form);
+        
+        fetch(actionUrl, {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.text())
+        .then(msg => {
+            resposta.innerText = msg;
+            resposta.className = "success";
+            form.reset();
+            
+            // Reabilita o botão e restaura o texto original
+            submitButton.disabled = false;
+            submitButton.textContent = "Enviar";
+            
+            setTimeout(() => {
+                resposta.innerText = "";
+                resposta.className = "";
+            }, 3000);
+        })
+        .catch(err => {
+            resposta.innerText = "Erro ao enviar dados. Por favor, tente novamente.";
+            resposta.className = "error";
+            console.error(err);
+            
+            // Reabilita o botão em caso de erro
+            submitButton.disabled = false;
+            submitButton.textContent = "Enviar";
+        });
+    });
+}
+</script>
+<script>
+//-----------whatsapp.;
+//setup
+        const iconepagina="";
+        const WPhone="5551998111078";                                      /* telefone */
+        const vProduto="Grand Park Moinhos";                               /* nome do prod */
+        const defaultmsg="Gostaria de mais informações sobre o "+vProduto; /* msg padrão whats */
+
+changeFavicon(iconepagina); /*muda icone da página */
+
+
+// Seleciona a tag <link> do favicon e muda seu 'href'
+function changeFavicon(newIconPath) {
+    const favicon = document.querySelector('link[rel="icon"]');
+    favicon.href = newIconPath;
+}
+
+
+
+
+        function wamesend (){
+           return generateWhatsAppLink(WPhone,defaultmsg);
+        }
+
+        // Função para codificar a mensagem para o formato correto do WhatsApp
+        function formatarParaURLEncoding(texto) {
+            // Usa encodeURIComponent para codificar o texto
+            // Substitui manualmente as quebras de linha por %0A
+            return encodeURIComponent(texto).replace(/%0A/g, '%0A').replace(/\n/g, '%0A');
+        }
+
+        function generateWhatsAppLink(phone,message) {
+            // Codifica a mensagem usando a função de URL encoding
+            const encodedMessage = formatarParaURLEncoding(message);
+            // Gera a URL do WhatsApp
+            const whatsappUrl = `https://wa.me/${phone}?text=${encodedMessage}`;
+
+            // Exibe a URL codificada no campo de texto
+            return whatsappUrl;
+        }
+
+        
+    
+
+
+//-----------FIM SCRIPT POST FORM ------------------
+        // Máscara para telefone
+document.getElementById('telefone2').addEventListener('input', function (e) {
+            let value = e.target.value.replace(/\D/g, '');
+            
+            if (value.length > 11) {
+                value = value.substring(0, 11);
+            }
+            
+            if (value.length > 0) {
+                value = value.replace(/^(\d{0,2})(\d{0,5})(\d{0,4}).*/, '($1) $2-$3');
+            }
+            
+            e.target.value = value;
+        });
+
+        document.getElementById('telefone1').addEventListener('input', function (e) {
+            let value = e.target.value.replace(/\D/g, '');
+            
+            if (value.length > 11) {
+                value = value.substring(0, 11);
+            }
+            
+            if (value.length > 0) {
+                value = value.replace(/^(\d{0,2})(\d{0,5})(\d{0,4}).*/, '($1) $2-$3');
+            }
+            
+            e.target.value = value;
+        });
+
+        // Validação para o campo de data
+        document.getElementById('nascimento1').addEventListener('change', function(e) {
+            const selectedDate = new Date(e.target.value);
+            const today = new Date();
+            
+            if (selectedDate > today) {
+                alert('Data de nascimento não pode ser no futuro');
+                e.target.value = '';
+            }
+        });
+
+         // Validação para o campo de data
+        document.getElementById('nascimento2').addEventListener('change', function(e) {
+            const selectedDate = new Date(e.target.value);
+            const today = new Date();
+            
+            if (selectedDate > today) {
+                alert('Data de nascimento não pode ser no futuro');
+                e.target.value = '';
+            }
+        });
+    </script>
+</body>
+</html>
